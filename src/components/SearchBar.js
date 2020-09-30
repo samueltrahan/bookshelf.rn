@@ -5,7 +5,6 @@ const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('')
 
   const onInputChange = (event) => {
-    event.preventDefault();
     setSearchTerm(event.target.value)
   }
 
@@ -15,7 +14,8 @@ const SearchBar = () => {
     <div className="ui form">
       <form className="field">
     <label>Search Books</label>
-    <input id="input" value={searchTerm} onChange={onInputChange} className="input" type="text"></input>
+    <input id="input" value={searchTerm} onChange={onInputChange} className="input" type="text"></input><br />
+    <button className="btn waves-effect waves-light">Submit<i className="material-icons right"></i></button>
       </form>
     </div>
     </>
