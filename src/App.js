@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import SearchBar from './components/SearchBar'
 
 
 const App = () => {
@@ -7,7 +8,7 @@ const App = () => {
 
   return (
     <>
-    
+    <SearchBar />
     </>
   )
 }

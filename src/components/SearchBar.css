@@ -1,0 +1,18 @@
+label {
+  text-align: center;
+}
+
+.field {
+  display: flexbox;
+  text-align: center;
+}
+
+button {
+  color: gold;
+}
+
+#input {
+  width: 500px;
+  height: 20px;
+  margin-bottom: 10px;
+}
