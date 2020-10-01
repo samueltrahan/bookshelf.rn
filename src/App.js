@@ -7,7 +7,7 @@ import axios from 'axios'
 const App = () => {
   const [books, setBooks] = useState([])
 
-  const handleSerachSubmit = (event, searchTerm) => {
+  const handleSearchSubmit = (event, searchTerm) => {
     event.preventDefault();
     axios.get('/books', {
       params: {
@@ -25,7 +25,7 @@ const App = () => {
   return (
     <>
     <NavBar />
-    <SearchBar />
+    <SearchBar handleSearchSubmit={handleSearchSubmit}/>
     </>
   )
 }
