@@ -6,8 +6,11 @@ const axios = require('axios');
 const key = process.env.API_KEY;
 
 app.get('/books', (req, res) => {
-  axios.get()
-  res.send()
+  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.searchTerm}&key${key}`)
+  .then((response) => {
+    res.send(response.data)
+  })
+  .catch((err) => console.log(err));
 });
 
 
