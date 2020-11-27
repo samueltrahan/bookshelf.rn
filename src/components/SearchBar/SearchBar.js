@@ -14,10 +14,10 @@ const SearchBar = ({handleSearchSubmit}) => {
   return (
     <>
     <div className="ui form">
-      <form className="field">
+      <form className="field" onSubmit={(event) => handleSearchSubmit(event, searchTerm)}>
     <label>Search Books</label>
     <input id="input" value={searchTerm} onChange={onInputChange} className="input" type="text"></input><br />
-    <button type="submit" onClick={(event) => handleSearchSubmit(event, searchTerm)} className="btn waves-effect waves-light">Submit<i className="material-icons right"></i></button>
+    <button type="submit"  className="btn waves-effect waves-light">Submit<i className="material-icons right"></i></button>
       </form>
     </div>
     </>

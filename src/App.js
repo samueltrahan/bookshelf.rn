@@ -16,7 +16,7 @@ const App = () => {
       },
     })
       .then((response) => {
-        console.log(response.data)
+        console.log(response)
         setBooks(response.data)
       })
       .catch((err) => console.log(err));

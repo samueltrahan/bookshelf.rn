@@ -2,11 +2,14 @@ const express = require('express');
 const app = express();
 const port = 3001;
 const axios = require('axios');
+require("dotenv").config()
 
-const key = process.env.API_KEY;
+const key = process.env.REACT_APP_API_KEY;
 
 app.get('/books', (req, res) => {
-  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.searchTerm}&key=${key}`)
+  console.log(req.query.searchTerm + '!!!!!!!!')
+  console.log(key)
+  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.searchTerm}&key=${process.env.REACT_APP_API_KEY}`)
   .then((response) => {
     console.log(response.data)
     res.send(response.data)
