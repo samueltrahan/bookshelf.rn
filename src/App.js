@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NavBar from './components/NavBar'
 import SearchBar from './components/SearchBar'
 import axios from 'axios'
@@ -23,10 +24,10 @@ const App = () => {
 
 
   return (
-    <>
+    <Router>
     <NavBar />
     <SearchBar handleSearchSubmit={handleSearchSubmit}/>
-    </>
+    </Router>
   )
 }
 

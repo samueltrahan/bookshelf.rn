@@ -1,3 +1,31 @@
 .nav-bar {
-  background-color: blue;
+  background-color: rgb(107, 38, 38);
+  height: 100px;
+  display: grid;
+  grid-template-columns:  1fr 1fr 1fr;
+}
+
+.nav-logo {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.nav-links {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+  color: white;
+  margin: 10px;
+}
+
+.links:hover {
+  color: black;
 }
