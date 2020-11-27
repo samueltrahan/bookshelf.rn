@@ -7,11 +7,9 @@ require("dotenv").config()
 const key = process.env.REACT_APP_API_KEY;
 
 app.get('/books', (req, res) => {
-  console.log(req.query.searchTerm + '!!!!!!!!')
   console.log(key)
-  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.searchTerm}&key=${process.env.REACT_APP_API_KEY}`)
+  axios.get(`https://www.googleapis.com/books/v1/volumes?q=${req.query.searchTerm}&printType=books&key=${process.env.REACT_APP_API_KEY}`)
   .then((response) => {
-    console.log(response.data)
     res.send(response.data)
   })
   .catch((err) => console.log(err));

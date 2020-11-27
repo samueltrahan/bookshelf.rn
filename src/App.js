@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar'
-import SearchBar from './components/SearchBar/SearchBar'
+import SearchBar from './components/SearchBar/SearchBar';
+import Display from './components/Display/Display';
 import axios from 'axios'
 
 
@@ -16,8 +17,8 @@ const App = () => {
       },
     })
       .then((response) => {
-        console.log(response)
-        setBooks(response.data)
+        console.log(response.data.items)
+        setBooks(response.data.items)
       })
       .catch((err) => console.log(err));
   }
@@ -27,6 +28,7 @@ const App = () => {
     <Router>
     <NavBar />
     <SearchBar handleSearchSubmit={handleSearchSubmit}/>
+    <Display books={books}/>
     </Router>
   )
 }
