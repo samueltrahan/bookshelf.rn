@@ -1,25 +1,25 @@
 import React, {useState} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
-import NavBar from './components/NavBar'
-import SearchBar from './components/SearchBar'
+import {BrowserRouter as Router} from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar'
+import SearchBar from './components/SearchBar/SearchBar'
 import axios from 'axios'
 
 
 const App = () => {
   const [books, setBooks] = useState([])
 
-  const handleSearchSubmit = (event, searchTerm) => {
+  const handleSearchSubmit = async (event, searchTerm) => {
     event.preventDefault();
     axios.get('/books', {
       params: {
         searchTerm: searchTerm
-      }
-      .then((response) => {
-        setBooks(response.data)
-        console.log(response.data)
-      })
-      .catch((err) => console.log(err))
+      },
     })
+      .then((response) => {
+        console.log(response.data)
+        setBooks(response.data)
+      })
+      .catch((err) => console.log(err));
   }
 
 
