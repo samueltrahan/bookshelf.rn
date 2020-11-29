@@ -1,0 +1,11 @@
+.books {
+  border: 2px solid black;
+  width: 100px;
+  height: 500px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

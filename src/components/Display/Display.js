@@ -7,7 +7,7 @@ export default function Display({books}) {
 
 
   return (
-    <div>
+    <div className="display">
       {books.map((book) => 
       <Books book={book}/>
       )}

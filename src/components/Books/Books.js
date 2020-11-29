@@ -4,7 +4,7 @@ import './Books.css';
 export default function Books({book}) {
 
   return (
-    <div>
+    <div className="books">
       {book.volumeInfo.title}
     </div>
   )
