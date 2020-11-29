@@ -5,7 +5,8 @@ export default function Books({book}) {
 
   return (
     <div className="books">
-      {book.volumeInfo.title}
+      {book.volumeInfo.title}<br />
+      By: {book.volumeInfo.authors}
     </div>
   )
 }
