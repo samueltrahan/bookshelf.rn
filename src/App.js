@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar/SearchBar';
 import Display from './components/Display/Display';
 import axios from 'axios';
 import LandingPage from './pages/LandingPage/LandingPage';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
@@ -29,7 +30,10 @@ const App = () => {
     <Router>
     <NavBar />
     <Route exact path="/" render={() => 
-    <LandingPage />
+    <div>
+      <LandingPage />
+      <Footer />
+    </div>
     }>
 
     </Route>
@@ -37,9 +41,11 @@ const App = () => {
     <div>
       <SearchBar handleSearchSubmit={handleSearchSubmit}/>
       <Display books={books}/>
+      <Footer />
     </div>
     }>
     </Route>
+
     </Router>
   )
 }

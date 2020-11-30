@@ -1,0 +1,31 @@
+.landing-page {
+  background: url(/images/bookshelf-alt.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.landing-head {
+  color: rgb(189, 176, 176);
+  text-shadow: 5px 5px 5px black;
+  font-size: 100px;
+}
+
+.landing-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 2px black;
+  color: rgb(189, 176, 176);
+  font-size: 50px;
+}
+
+.landing-link:hover {
+  color: brown;
+}
