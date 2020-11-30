@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar'
 import SearchBar from './components/SearchBar/SearchBar';
 import Display from './components/Display/Display';
-import axios from 'axios'
+import axios from 'axios';
+import LandingPage from './pages/LandingPage/LandingPage';
 
 
 const App = () => {
@@ -27,8 +28,18 @@ const App = () => {
   return (
     <Router>
     <NavBar />
-    <SearchBar handleSearchSubmit={handleSearchSubmit}/>
-    <Display books={books}/>
+    <Route exact path="/" render={() => 
+    <LandingPage />
+    }>
+
+    </Route>
+    <Route exact path="/search" render={() => 
+    <div>
+      <SearchBar handleSearchSubmit={handleSearchSubmit}/>
+      <Display books={books}/>
+    </div>
+    }>
+    </Route>
     </Router>
   )
 }
